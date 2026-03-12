@@ -68,8 +68,50 @@ public class Main {
     }
 
     return root;
+
 }
-    // ---------- DISPLAY FUNCTION ----------
+
+// ---------- SIZE FUNCTION ----------
+    public static int size(Node node) {
+        if (node == null)
+            return 0;
+
+        int leftSize = size(node.left);
+        int rightSize = size(node.right);
+
+        return leftSize + rightSize + 1;
+    }
+    //---------- HEIGHT FUNCTION ----------
+    public static int height(Node node) {
+        if (node == null)
+            return -1;
+
+        int leftHeight = height(node.left);
+        int rightHeight = height(node.right);
+
+        return Math.max(leftHeight, rightHeight) + 1;
+    }
+    // ---------- MAXIMUM FUNCTION ----------
+    public static int maximum(Node node) {
+        if (node == null)
+            return Integer.MIN_VALUE;
+
+        int leftMax = maximum(node.left);
+        int rightMax = maximum(node.right);
+
+        return Math.max(node.data, Math.max(leftMax, rightMax));
+    }
+   //----------sum function ----------
+    public static int sum(Node node) {
+        if (node == null)
+            return 0;
+
+        int leftSum = sum(node.left);
+        int rightSum = sum(node.right);
+
+        return leftSum + rightSum + node.data;
+    }
+        // ---------- DISPLAY FUNCTION ----------
     public static void display(Node node) {
 
         if (node == null)
