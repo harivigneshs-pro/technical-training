@@ -82,6 +82,8 @@ public static int height(Node node){//faith -f(10)-expectation-maxmimum height(f
     h+=1;
     return h;
 }
+//reverse the linked list using recursion
+
 
     public static void main(String[] args) {
 
