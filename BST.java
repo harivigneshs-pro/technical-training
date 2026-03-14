@@ -62,7 +62,7 @@ public class BST {
         else
             str += node.right.data;
 
-        System.out.prin8+tln(str);
+        System.out.pritln(str);
 
         display(node.left);
         display(node.right);
